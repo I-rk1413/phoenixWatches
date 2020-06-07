@@ -1,0 +1,75 @@
+body{
+    font-family: sans-serif;
+}
+
+.Topbar{
+    background-color: rgb(39,39,39);
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+      }
+      
+.Topbar > img{
+    margin-left: 43%;
+    padding :10px;   
+      }
+
+.MainContainer{
+    padding: 4% 12%;
+    margin-top: 32px;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.ProductPreview{
+    width: 50%;
+    position: relative;
+}
+
+.ProductData{
+    width: 50%;
+}
+
+
+/* Making responsive for small screens */
+
+@media screen and (max-width: 575px){
+    .MainContainer{
+        padding: 0%;
+        margin-top: 32px;
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        align-items: center;
+    }
+    .Topbar{
+        z-index: 2;
+          }
+    .Topbar > img{
+        margin-left: 37%;
+        padding :10px; 
+        width: 20%;
+        z-index: 2;
+        
+          }
+     .ProductPreview{
+           width: 100%;
+           margin-left: auto;
+           margin-right: auto;
+           margin-top: 15%;
+           z-index: 1;
+
+        }
+        
+    .ProductData{
+            width: 100vw;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+}
+

@@ -1,0 +1,74 @@
+.ProductPreview{
+    width: 100%;
+    position: relative;
+}
+.ProductPreview > img{
+    width: 100%;
+}
+.Time{
+    position: absolute;
+    top: 49%;
+    left: 49%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 48px;
+    }
+
+    .HeartBeat{
+        position: absolute;
+        top: 50%;
+        left: 49%;
+        transform: translate(-50%,-50%);
+        color: white;
+        font-size: 48px;    
+    }
+
+    .HeartBeat>i{
+        color: red;
+        margin-left: 5px;
+        animation: beat 1s infinite;
+    }
+
+    .HeartBeat>p{
+        margin-top: 16px;
+    }
+    @keyframes beat{
+        0%{
+            transform: scale(1,1);
+        }
+        50%{
+            transform: scale(1.1,1.1);
+        }
+        100%{
+            transform: scale(1.2,1.2);
+        }
+    }
+
+
+    /* Making responsive for small screens */
+
+    @media screen and (max-width: 575px){
+       
+        .ProductPreview > img{
+            width: 100%;
+        }
+        
+        .Time{
+            position: absolute;
+            top: 49%;
+            left: 49%;
+            font-size: 38px;
+            }
+        
+            .HeartBeat{
+                position: absolute;
+                top: 53%;
+                left: 49%;
+                font-size: 38px;    
+            }
+        
+            .HeartBeat>p{
+                margin-top: 10px;
+            }
+            
+        }        
