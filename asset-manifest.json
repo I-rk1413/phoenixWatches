@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/PhoenixWatches/static/css/main.cd550d6f.chunk.css",
-    "main.js": "/PhoenixWatches/static/js/main.4ee36354.chunk.js",
-    "main.js.map": "/PhoenixWatches/static/js/main.4ee36354.chunk.js.map",
-    "runtime-main.js": "/PhoenixWatches/static/js/runtime-main.f29db6c3.js",
-    "runtime-main.js.map": "/PhoenixWatches/static/js/runtime-main.f29db6c3.js.map",
-    "static/js/2.9feccc6b.chunk.js": "/PhoenixWatches/static/js/2.9feccc6b.chunk.js",
-    "static/js/2.9feccc6b.chunk.js.map": "/PhoenixWatches/static/js/2.9feccc6b.chunk.js.map",
-    "index.html": "/PhoenixWatches/index.html",
-    "precache-manifest.c3425609a69fe873ae7ca0482a1309d5.js": "/PhoenixWatches/precache-manifest.c3425609a69fe873ae7ca0482a1309d5.js",
-    "service-worker.js": "/PhoenixWatches/service-worker.js",
-    "static/css/main.cd550d6f.chunk.css.map": "/PhoenixWatches/static/css/main.cd550d6f.chunk.css.map",
-    "static/js/2.9feccc6b.chunk.js.LICENSE.txt": "/PhoenixWatches/static/js/2.9feccc6b.chunk.js.LICENSE.txt",
-    "static/media/amazonLogo.jpg": "/PhoenixWatches/static/media/amazonLogo.841a6d2a.jpg"
+    "main.css": "/phoenixWatches/static/css/main.cd550d6f.chunk.css",
+    "main.js": "/phoenixWatches/static/js/main.8191eb1b.chunk.js",
+    "main.js.map": "/phoenixWatches/static/js/main.8191eb1b.chunk.js.map",
+    "runtime-main.js": "/phoenixWatches/static/js/runtime-main.6c060283.js",
+    "runtime-main.js.map": "/phoenixWatches/static/js/runtime-main.6c060283.js.map",
+    "static/js/2.9feccc6b.chunk.js": "/phoenixWatches/static/js/2.9feccc6b.chunk.js",
+    "static/js/2.9feccc6b.chunk.js.map": "/phoenixWatches/static/js/2.9feccc6b.chunk.js.map",
+    "index.html": "/phoenixWatches/index.html",
+    "precache-manifest.65d11926edf0606d11bfb56a2c5545de.js": "/phoenixWatches/precache-manifest.65d11926edf0606d11bfb56a2c5545de.js",
+    "service-worker.js": "/phoenixWatches/service-worker.js",
+    "static/css/main.cd550d6f.chunk.css.map": "/phoenixWatches/static/css/main.cd550d6f.chunk.css.map",
+    "static/js/2.9feccc6b.chunk.js.LICENSE.txt": "/phoenixWatches/static/js/2.9feccc6b.chunk.js.LICENSE.txt",
+    "static/media/amazonLogo.jpg": "/phoenixWatches/static/media/amazonLogo.841a6d2a.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f29db6c3.js",
+    "static/js/runtime-main.6c060283.js",
     "static/js/2.9feccc6b.chunk.js",
     "static/css/main.cd550d6f.chunk.css",
-    "static/js/main.4ee36354.chunk.js"
+    "static/js/main.8191eb1b.chunk.js"
   ]
 }
