@@ -1,24 +1,37 @@
 import React from 'react';
 import amazonLogo from './amazonLogo.jpg';
+import {connect } from 'react-redux';
 import styles from './App.module.css';
 import Productpreview from './ProductPreview/productpreview.js'
 import ProductData from './ProductData/productdata.js';
-import Backend from './backend'
+import Backend from './backend';
+import {changeColorOfWatch} from './actions';
 
+
+
+const mapStateToProps=(state)=>{
+  return{
+    previewImagePos:state.previewImagePos
+  }
+}
+
+
+const mapDispatchToProps=(dispatch)=>{
+  return{
+    onColorClick:(pos)=>dispatch(changeColorOfWatch(pos))
+  }
+}
 
 
 class  App extends React.Component {
 
   state={
     backend: Backend,
-    previewImagePos:0,
     featureTimeState: true,
     featurePos:0
   }
 
-  onColorClick=(pos)=>{
-    this.setState({previewImagePos: pos})
-  }
+
 
   onButtonClick=(pos)=>{
     this.setState((prevState,prevProps)=>{
@@ -41,20 +54,21 @@ class  App extends React.Component {
 
       <div className={styles.MainContainer}>
         <div className={styles.ProductPreview}>
-        <Productpreview currentImage={this.state.backend.colorOptions[this.state.previewImagePos].imageUrl} currentState={this.state.featureTimeState} />
+        <Productpreview currentImage={this.state.backend.colorOptions[this.props.previewImagePos].imageUrl} currentState={this.state.featureTimeState} />
         </div>
           
         <div className={styles.ProductData}>
-          <ProductData data={this.state.backend} onColorClick={this.onColorClick} previewImagePos={this.state.previewImagePos} onButtonClick={this.onButtonClick} 
+          <ProductData data={this.state.backend} onColorClick={this.props.onColorClick} previewImagePos={this.props.previewImagePos} onButtonClick={this.onButtonClick} 
           featurePos={this.state.featurePos}/>
         </div>
 
       </div>
       </div>
   
-  );}
+  );
+}
 }
 
 
-export default App;
+export default connect(mapStateToProps,mapDispatchToProps) (App);
 

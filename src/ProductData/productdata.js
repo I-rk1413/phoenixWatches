@@ -10,8 +10,7 @@ const colorOptions=props.data.colorOptions.map((item,pos)=>{
     classArr.push(styles.SelectedProduct)
   }
   return(
-    <img className={classArr.join(' ')} src={item.imageUrl} alt={item.styleName} onClick={()=>props.onColorClick(pos)}
-     key={pos}/>
+    <img className={classArr.join(' ')} src={item.imageUrl} alt={item.styleName} onClick={()=> props.onColorClick(pos) } key={pos}/>
   )
 });
 
@@ -48,3 +47,4 @@ const selectedButton=props.data.featureList.map((item,pos)=>{
 }
 
 export default ProductData;
+
