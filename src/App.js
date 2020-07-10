@@ -26,7 +26,6 @@ const mapDispatchToProps=(dispatch)=>{
 class  App extends React.Component {
 
   state={
-    backend: Backend,
     featureTimeState: true,
     featurePos:0
   }
@@ -54,11 +53,11 @@ class  App extends React.Component {
 
       <div className={styles.MainContainer}>
         <div className={styles.ProductPreview}>
-        <Productpreview currentImage={this.state.backend.colorOptions[this.props.previewImagePos].imageUrl} currentState={this.state.featureTimeState} />
+        <Productpreview currentImage={Backend.colorOptions[this.props.previewImagePos].imageUrl} currentState={this.state.featureTimeState} />
         </div>
           
         <div className={styles.ProductData}>
-          <ProductData data={this.state.backend} onColorClick={this.props.onColorClick} previewImagePos={this.props.previewImagePos} onButtonClick={this.onButtonClick} 
+          <ProductData data={Backend} onColorClick={this.props.onColorClick} previewImagePos={this.props.previewImagePos} onButtonClick={this.onButtonClick} 
           featurePos={this.state.featurePos}/>
         </div>
 
