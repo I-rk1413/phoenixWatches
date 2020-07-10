@@ -5,11 +5,12 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import{createLogger} from 'redux-logger'
 import {Provider} from 'react-redux';
-import {createStore, applyMiddleware} from 'redux';
-import {changeColor} from './reducers';
+import {createStore, applyMiddleware, combineReducers} from 'redux';
+import {changeColor,changeFeature} from './reducers';
 
 const logger=createLogger();
-const store=createStore(changeColor,applyMiddleware(logger));
+const rootReducer=combineReducers({changeColor,changeFeature})
+const store=createStore(rootReducer,applyMiddleware(logger));
 
 
 ReactDOM.render(

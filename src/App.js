@@ -5,20 +5,22 @@ import styles from './App.module.css';
 import Productpreview from './ProductPreview/productpreview.js'
 import ProductData from './ProductData/productdata.js';
 import Backend from './backend';
-import {changeColorOfWatch} from './actions';
+import {changeColorOfWatch,changeFeatureOfWatch} from './actions';
 
 
 
 const mapStateToProps=(state)=>{
   return{
-    previewImagePos:state.previewImagePos
+    previewImagePos:state.changeColor.previewImagePos,
+    featureTimeState:state.changeFeature.featureTimeState
   }
 }
 
 
 const mapDispatchToProps=(dispatch)=>{
   return{
-    onColorClick:(pos)=>dispatch(changeColorOfWatch(pos))
+    onColorClick:(pos)=>dispatch(changeColorOfWatch(pos)),
+    onButtonClick:(pos)=>dispatch(changeFeatureOfWatch(pos))
   }
 }
 
@@ -53,12 +55,12 @@ class  App extends React.Component {
 
       <div className={styles.MainContainer}>
         <div className={styles.ProductPreview}>
-        <Productpreview currentImage={Backend.colorOptions[this.props.previewImagePos].imageUrl} currentState={this.state.featureTimeState} />
+        <Productpreview currentImage={Backend.colorOptions[this.props.previewImagePos].imageUrl} currentState={this.props.featureTimeState} />
         </div>
           
         <div className={styles.ProductData}>
-          <ProductData data={Backend} onColorClick={this.props.onColorClick} previewImagePos={this.props.previewImagePos} onButtonClick={this.onButtonClick} 
-          featurePos={this.state.featurePos}/>
+          <ProductData data={Backend} onColorClick={this.props.onColorClick} previewImagePos={this.props.previewImagePos}
+           onButtonClick={this.props.onButtonClick} />
         </div>
 
       </div>
